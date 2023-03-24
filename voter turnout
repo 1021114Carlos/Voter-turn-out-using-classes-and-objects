@@ -3,29 +3,19 @@ class County:
     def __init__(self, name, population, voters):
         self.name = name
         self.population = population
-        self.voters = voters
-    
-
-      
-    
+        self.voters = voters   
 def highest_turnout(data) :
-    low_turnout = 0
+    voter_turnout = 0
     county_name = ""
 
-    #print(county_name)
-    
-    
     for county in data:
         percentage = (county.voters/county.population)*100
     
-        if low_turnout < percentage:
-            low_turnout = percentage
+        if voter_turnout < percentage:
             voter_turnout = percentage
             county_name = county.name
-        else:
-           voter_turnout = percentage
 
-    return (county_name, low_turnout) # modify this as needed
+    return (county_name, voter_turnout) # modify this as needed
 
 # your program will be evaluated using these objects 
 # it is okay to change/remove these lines but your program
